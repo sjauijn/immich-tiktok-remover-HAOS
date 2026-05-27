@@ -154,7 +154,7 @@ def archiveVideo(id: str):
 
     payload = {
     "ids": [id],
-    "isArchived": True,
+    "visibility": "archive"
     }
     headers = {
         'x-api-key': API_KEY,
