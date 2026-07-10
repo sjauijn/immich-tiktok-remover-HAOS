@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sjauijn/immich-tiktok-remover-HAOS/main/icon.png" alt="icon">
+</p>
+
 # Immich TikTok Remover
 
-Home Assistant port of [immich-tiktok-remover](https://github.com/mxc2/immich-tiktok-remover), built on its **stable-lite** detection path: TikTok videos are identified purely from filename length/alphanumeric pattern and creation date — no machine learning, no video download, no OCR. This mirrors the upstream `stable-lite (~100MB)` image rather than the ML-based `stable (~4.1GB)` image.
+I maintain this app, along with my other Home Assistant apps, solely for my own use. As long as I'm actively using them myself, I'll continue developing and updating them; otherwise, support for apps I no longer need will be discontinued.
 
 ## Quick Start
 
@@ -55,6 +59,3 @@ A job with a missing `immich_url` or `api_key` is skipped (with a warning in the
 ## Note on the ML variant
 
 Upstream also ships a `stable` image that adds EasyOCR-based watermark image recognition (~4.1GB) for higher accuracy on videos whose filenames don't match TikTok's pattern. That path is not included in this add-on; only the lightweight, filename/date-based `stable-lite` logic is ported.
-
-## Credits
-Ported from [mxc2/immich-tiktok-remover](https://github.com/mxc2/immich-tiktok-remover).
