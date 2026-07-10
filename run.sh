@@ -23,7 +23,7 @@ run_job() {
   output_all="$(echo "${job}" | jq -r '.output_all')"
   archive="$(echo "${job}" | jq -r '.archive')"
   search_archived="$(echo "${job}" | jq -r '.search_archived')"
-  file_types="$(echo "${job}" | jq -r '.file_types // "mp4"')"
+  file_types="$(echo "${job}" | jq -r '(.file_types // ["mp4"]) | join(",")')"
   file_name_length="$(echo "${job}" | jq -r '.file_name_length // 32')"
   file_name_is_not_alumn="$(echo "${job}" | jq -r '.file_name_is_not_alumn')"
   file_created_after="$(echo "${job}" | jq -r '.file_created_after // 1472688000')"
