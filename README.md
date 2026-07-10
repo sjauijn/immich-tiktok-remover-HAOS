@@ -18,3 +18,6 @@ Immich-Tiktok-Remover is a tool focused on automatically removing TikTok videos 
    ```text
    https://github.com/sjauijn/immich-tiktok-remover-HAOS
    ```
+   
+## Big thanks to:
+[@mxc2](https://github.com/mxc2/immich-tiktok-remover) for awesome work
