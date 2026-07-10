@@ -3,26 +3,26 @@ configuration:
     name: Интервал сканирования (секунды)
     description: Как часто повторно запускать все задачи. 0 — выполнить один раз и завершить.
   verbose:
-    name: Подробное логгирование
+    name: Подробное логирование
     description: Вести детальный журнал вызовов API для каждой задачи.
   jobs:
     name: Задачи сканирования
     description: Одна запись на аккаунт Immich для поиска TikTok-видео.
     fields:
       immich_url:
-        name: URL сервера Immich
+        name: URL сервера Immich (Immich server URL)
         description: Учитывайте адрес и порт, например http://homeassistant.local:8080 или https://immich.example.com
       api_key:
-        name: API-ключ
+        name: API-ключ (API Key)
         description: API-ключ, созданный в этом конкретном аккаунте Immich.
       output_all:
         name: Выводить все видео
-        description: Логгировать каждое проверенное видео, а не только определённые как TikTok.
+        description: Логировать каждое проверенное видео, а не только определённые как TikTok.
       archive:
         name: Архивировать вместо удаления
         description: Отправлять найденные TikTok-видео в архив вместо корзины.
       search_archived:
-        name: Учитывать архивные видео
+        name: Включая архивные видео
         description: Также проверять видео, которые уже находятся в архиве.
       file_types:
         name: Расширения файлов
@@ -34,5 +34,5 @@ configuration:
         name: Отключить проверку на буквенно-цифровое имя
         description: Включите, если экспортированные из TikTok файлы не имеют чисто буквенно-цифровых имён.
       file_created_after:
-        name: Проверять только видео созданные после
+        name: Проверять только видео созданные после (unix timestamp)
         description: Пропускает видео, созданные раньше указанной даты. 0 отключает эту проверку.
