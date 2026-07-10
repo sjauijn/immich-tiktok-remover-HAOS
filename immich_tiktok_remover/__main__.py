@@ -3,7 +3,6 @@ import time
 import click
 
 from .immich import (
-    pingServer,
     getAllAssets,
     serveVideo,
     trashVideo,
@@ -16,10 +15,6 @@ from .verification import verifyVideoNameAndDate, processVideo
 def run_once(domain, key, output_all, archive, search_archived,
              file_types_to_check_for, file_name_length, file_name_is_alumn,
              file_created_after):
-    if not pingServer(domain, key):
-        click.echo(click.style("Error while trying to connect to Immich. Check the server URL / API key.", fg="red"))
-        return
-
     detected_tiktok_videos = 0
     no_tiktok_videos = 0
     total_tiktok_file_size = 0
