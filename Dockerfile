@@ -20,12 +20,12 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="mxc2 (ported)" \
+    maintainer="sjauijn" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="mxc2" \
-    org.opencontainers.image.authors="mxc2" \
-    org.opencontainers.image.url="https://github.com/mxc2/immich-tiktok-remover" \
+    org.opencontainers.image.vendor="sjauijn" \
+    org.opencontainers.image.authors="sjauijn" \
+    org.opencontainers.image.url="https://github.com/sjauijn/immich-tiktok-remover-HAOS" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
