@@ -6,20 +6,6 @@ import json
 import requests
 
 
-def pingServer(domain: str, api_key: str) -> bool:
-    """
-    Ping the server to check if it's reachable.
-    """
-    url = domain + "api/server-info/ping"
-    headers = {
-        "x-api-key": api_key,
-        "Accept": "application/json",
-    }
-
-    response = requests.get(url, headers=headers)
-    return response.status_code == 200
-
-
 def getAllAssets(domain: str, api_key: str, search_archived: bool):
     """
     Retrieve all VIDEO assets from the server with paginated requests.
