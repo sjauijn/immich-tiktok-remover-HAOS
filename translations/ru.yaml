@@ -3,7 +3,7 @@ configuration:
     name: Интервал сканирования (секунды)
     description: Как часто повторно запускать все задачи. 0 — выполнить один раз и завершить.
   verbose:
-    name: Подробное логирование
+    name: Подробное логгирование
     description: Вести детальный журнал вызовов API для каждой задачи.
   jobs:
     name: Задачи сканирования
@@ -16,23 +16,23 @@ configuration:
         name: API-ключ (API Key)
         description: API-ключ, созданный в этом конкретном аккаунте Immich.
       output_all:
-        name: Выводить все видео
-        description: Логировать каждое проверенное видео, а не только определённые как TikTok.
+        name: Выводить все видео (Output all videos)
+        description: Логгировать каждое проверенное видео, а не только определённые как TikTok.
       archive:
-        name: Архивировать вместо удаления
+        name: Архивировать вместо удаления (Archive instead of trash)
         description: Отправлять найденные TikTok-видео в архив вместо корзины.
       search_archived:
-        name: Включая архивные видео
+        name: Учитывать архивные видео (Include archived videos)
         description: Также проверять видео, которые уже находятся в архиве.
       file_types:
-        name: Расширения файлов
+        name: Расширения файлов (File extensions)
         description: Список расширений видео через запятую для проверки (например mp4).
       file_name_length:
-        name: Ожидаемая длина имени файла
+        name: Ожидаемая длина имени файла (Expected filename length)
         description: Длина имени файла без расширения, характерная для экспортов TikTok. 0 отключает эту проверку.
       file_name_is_not_alumn:
-        name: Отключить проверку на буквенно-цифровое имя
+        name: Отключить проверку на буквенно-цифровое имя (Disable alphanumeric filename check)
         description: Включите, если экспортированные из TikTok файлы не имеют чисто буквенно-цифровых имён.
       file_created_after:
-        name: Проверять только видео созданные после (unix timestamp)
+        name: Проверять только видео созданные после (Only check videos created after)
         description: Пропускает видео, созданные раньше указанной даты. 0 отключает эту проверку.
