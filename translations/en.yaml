@@ -1,0 +1,38 @@
+configuration:
+  run_every_seconds:
+    name: Scan interval (seconds)
+    description: How often to re-run all jobs. 0 runs once and exits.
+  verbose:
+    name: Verbose logging
+    description: Print detailed API calls for every job.
+  jobs:
+    name: Scan jobs
+    description: One entry per Immich account to scan for TikTok videos.
+    fields:
+      immich_url:
+        name: Immich server URL
+        description: Include scheme and port, e.g. https://immich.example.com
+      api_key:
+        name: API key
+        description: API key generated on this specific Immich account.
+      output_all:
+        name: Output all videos
+        description: Log every video checked, not just the ones detected as TikTok.
+      archive:
+        name: Archive instead of trash
+        description: Archive detected TikTok videos instead of moving them to trash.
+      search_archived:
+        name: Include archived videos
+        description: Also scan videos that are already archived.
+      file_types:
+        name: File extensions
+        description: Comma separated list of video extensions to check (e.g. mp4).
+      file_name_length:
+        name: Expected filename length
+        description: Filename length without extension that TikTok exports typically have. 0 disables this check.
+      file_name_is_not_alumn:
+        name: Disable alphanumeric filename check
+        description: Enable if your TikTok exports don't have purely alphanumeric filenames.
+      file_created_after:
+        name: Only check videos created after (unix timestamp)
+        description: Skips videos created before this date. 0 disables this check.
