@@ -16,6 +16,17 @@ I maintain this app, along my other apps and custom integrations for the Home As
 
 By default the add-on runs once, processes matching videos, then repeats every `run_every_seconds` (3600s / 1 hour). Set `run_every_seconds` to `0` if you'd rather trigger a single scan from a Home Assistant automation instead of running it continuously.
 
+## API key permissions
+ 
+Create a dedicated API key in Immich (**Account Settings → API Keys**) and grant it only the permissions below:
+ 
+| Permission | Required | Used for | Endpoint |
+|------------|----------|----------|----------|
+| `asset.read` | Always | Listing all `VIDEO` assets (paginated) and fetching details of each candidate video | `POST /api/search/metadata`, `GET /api/assets/{id}` |
+| `asset.view` | Always | Downloading the video file for verification | `GET /api/assets/{id}/video/playback` |
+| `asset.delete` | Only if `archive` is `false` (default) | Moving matched videos to the trash (`force: false`, so they can be restored) | `DELETE /api/assets` |
+| `asset.update` | Only if `archive` is `true` | Archiving matched videos instead of trashing them (`visibility: archive`) | `PUT /api/assets` |
+
 ## How detection works (stable-lite)
 
 A video is flagged as a TikTok export if it matches all enabled heuristics:
